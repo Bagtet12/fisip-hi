@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Visit;
 use Illuminate\Http\Request;
 
 class UserPageController extends Controller
 {
     public function home()
     {
-        return view('page/users/home');
+        $visit = Visit::all();
+        return view('page/users/home', compact('visit'));
     }
     public function profile()
     {

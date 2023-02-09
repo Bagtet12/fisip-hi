@@ -9,27 +9,73 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>Hubungan International Universitas Jember</title>
+    <title>Hubungan Internasional Universitas Jember</title>
     <!-- Stylesheets & Fonts -->
-    <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Body Inner -->
     <div class="body-inner">
-@yield('header')
-        
-@yield('hover')
-
-@yield('content')
-
-@yield('content2')
-
-@yield('content3')
-
-@yield('content4')
-
+        <!-- Header -->
+        <header id="header" data-fullwidth="true">
+        </header>
+        <!-- end: Header -->
+        <!-- Page title -->
+        <section id="page-title">
+            <div class="container">
+                <div class="page-title">
+                    <h1>User login</h1>
+                    <span>User login page</span>
+                </div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li><a href="#">Pages</a>
+                        </li>
+                        <li class="active"><a href="#">User login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- end: Page title -->
+        <!-- Section -->
+        <section>
+            <div class="container-fluid d-flex flex-column">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+                        <div class="mb-5 text-center">
+                            <h6 class="h3 mb-1">Login</h6>
+                            <p class="text-muted mb-0">Sign in to your account to continue.</p>
+                        </div><span class="clearfix"></span>
+                        <form action="/login/post" method="POST" class="form-validate">
+                            @csrf
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Enter your email" required="">
+                                    <span class="input-group-text"><i class="icon-user"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="password">Password</label>
+                                <div class="input-group show-hide-password">
+                                    <input class="form-control" name="password" placeholder="Enter password" type="password" required="">
+                                    <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
+                                </div>
+                            </div>
+                            <div class="mt-4"><button type="submit" class="btn btn-primary btn-block btn-primary">Sign in</button></div>
+                        </form>
+                        <div class="mt-4 text-center"><small>Not registered?</small> <a href="page-user-register.html" class="small fw-bold">Create account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end: Section -->
         <!-- Footer -->
         <footer id="footer">
             <div class="footer-content">
@@ -37,30 +83,9 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="widget">
-
-                                <div class="widget-title">Contact</div>
+                                <div class="widget-title">Polo HTML5 Template</div>
                                 <p class="mb-5">Built with love in Fort Worth, Texas, USA<br> All rights reserved. Copyright © 2021. INSPIRO.</p>
-                                {{-- <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-inverted" target="_blank">Purchase Now</a> --}}
-                            </div>
-                            <div class="col-lg-12 m-b-30">
-                                <h4>We are social</h4>
-                                <div class="social-icons social-icons-light social-icons-colored-hover">
-                                    <ul>
-                                        <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
-                                        <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li class="social-instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                        <li class="social-gplus"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                        <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                        <li class="social-skype"><a href="#"><i class="fab fa-skype"></i></a></li>
-                                        <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                        <li class="social-behance"><a href="#"><i class="fab fa-behance"></i></a></li>
-                                        <li class="social-flickr"><a href="#"><i class="fab fa-flickr"></i></a></li>
-                                    </ul>
-                                </div>
+                                <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-inverted" target="_blank">Purchase Now</a>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -78,7 +103,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-3">
                                     <div class="widget">
                                         <div class="widget-title">Features</div>
@@ -90,7 +114,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-3">
                                     <div class="widget">
                                         <div class="widget-title">Pages</div>
@@ -113,31 +136,25 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">Copyright &copy; 2023 Hubungan International Universitas Jember</div>
+                    <div class="copyright-text text-center">&copy; 2021 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="https://www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
                 </div>
             </div>
         </footer>
         <!-- end: Footer -->
-
     </div>
     <!-- end: Body Inner -->
-
     <!-- Scroll top -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <!--Plugins-->
-    <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="{{ asset('js/plugins.js') }}"></script>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
     <!--Template functions-->
-    <script src="{{ asset('js/functions.js') }}"></script>
-
+    <script src="js/functions.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <div class="header-inner">
         <div class="container">
             <!--Logo-->
-            <div id="logo"> <a href="{{route('home')}}"><span class="logo-default">Logo</span><span class="logo-dark">Logo</span></a> </div>
+            <div id="logo" data-bg-image="homepages/creative/images/slider/Logo Web HI.jpg"><a href="{{route('home')}}"></a></div>
             <!--End: Logo-->
             <!-- Search -->
             <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
@@ -95,11 +95,13 @@
                     <!-- end: Captions -->
                 </div>
             </div>
+            <a href="http://wowslider.com">Click here to visit http://wowslider.com</a>
         </div>
         <!-- end: Slide 1 bu-->
         <!-- Slide 2 -->
         <div class="slide  kenburns" data-bg-image="homepages/creative/images/slider/2.png">
-            <div class="bg-overlay" ></div>
+            <div class="bg-overlay">
+            </div>
             <div class="container">
             </div>
             
@@ -248,160 +250,34 @@
             </section>
             <section>
                 <div class="container">
-                    <!--Team members -->
-                    {{-- <div class="heading-text heading-line text-center">
+                    <div class="heading-text heading-line text-center">
                         <h4>Visiting Lecture</h4>
-                    </div> --}}
-                    {{-- <div class="row team-members team-members-circle m-b-30">
+                    </div>
+                    <div class="row team-members team-members-circle m-b-20">
+                        @foreach ($visit as $vst)
                         <div class="col-lg-3">
                             <div class="team-member">
                                 <div class="team-image">
-                                    <img src="images/team/6.jpg">
+                                    <img src="{{ asset('gambar/picture/'. $vst->picture) }}">
                                 </div>
                                 <div class="team-desc">
-                                    <h3>Alea Smith</h3>
-                                    <span>Software Developer</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
+                                    <h3>{{ $vst->name }}</h3>
+                                    <span>{{ $vst->university }}</span>
                                     <div class="align-center">
-                                        <a class="btn btn-xs btn-slide btn-light" href="#">
-                                            <i class="fab fa-facebook-f"></i>
-                                            <span>Facebook</span></a>
-                                            <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                                <i class="fab fa-twitter"></i>
-                                                <span>Twitter</span></a>
-                                                <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                                    <i class="fab fa-instagram"></i>
-                                                    <span>Instagram</span></a>
-                                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                                        <i class="icon-mail"></i>
-                                                        <span>Mail</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    <div class="heading-text heading-line text-center">
-                                        <h4>Visiting Lecture</h4>
                                     </div>
-                                    <div class="row team-members team-members-circle m-b-30">
-                                        <div class="col-lg-3">
-                                            <div class="team-member">
-                                                <div class="team-image">
-                                                    <img src="images/team/6.jpg">
-                                                </div>
-                                                <div class="team-desc">
-                                                    <h3>Alea Smith</h3>
-                                                    <span>Software Developer</span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                                    <div class="align-center">
-                                                        <a class="btn btn-xs btn-slide btn-light" href="#">
-                                                            <i class="fab fa-facebook-f"></i>
-                                                            <span>Facebook</span></a>
-                                                            <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                                                <i class="fab fa-twitter"></i>
-                                                                <span>Twitter</span></a>
-                                                                <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                                                    <i class="fab fa-instagram"></i>
-                                                                    <span>Instagram</span></a>
-                                                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                                                        <i class="icon-mail"></i>
-                                                                        <span>Mail</span></a>
-                                                                    </div>
-                                                                </div>
-                                                                <a href="{{route('page-news')}}" class="item-link" style="">Read More <i class="fa fa-arrow-right"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="team-member">
-                                                                <div class="team-image">
-                                                                    <img src="images/team/6.jpg">
-                                                                </div>
-                                                                <div class="team-desc">
-                                                                    <h3>Alea Smith</h3>
-                                                                    <span>Software Developer</span>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                                                    <div class="align-center">
-                                                                        <a class="btn btn-xs btn-slide btn-light" href="#">
-                                                                            <i class="fab fa-facebook-f"></i>
-                                                                            <span>Facebook</span></a>
-                                                                            <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                                                                <i class="fab fa-twitter"></i>
-                                                                                <span>Twitter</span></a>
-                                                                                <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                                                                    <i class="fab fa-instagram"></i>
-                                                                                    <span>Instagram</span></a>
-                                                                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                                                                        <i class="icon-mail"></i>
-                                                                                        <span>Mail</span></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <a href="{{route('page-news')}}" class="item-link" style="">Read More <i class="fa fa-arrow-right"></i></a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-lg-3">
-                                                                            <div class="team-member">
-                                                                                <div class="team-image">
-                                                                                    <img src="images/team/6.jpg">
-                                                                                </div>
-                                                                                <div class="team-desc">
-                                                                                    <h3>Alea Smith</h3>
-                                                                                    <span>Software Developer</span>
-                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                                                                    <div class="align-center">
-                                                                                        <a class="btn btn-xs btn-slide btn-light" href="#">
-                                                                                            <i class="fab fa-facebook-f"></i>
-                                                                                            <span>Facebook</span></a>
-                                                                                            <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                                                                                <i class="fab fa-twitter"></i>
-                                                                                                <span>Twitter</span></a>
-                                                                                                <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                                                                                    <i class="fab fa-instagram"></i>
-                                                                                                    <span>Instagram</span></a>
-                                                                                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                                                                                        <i class="icon-mail"></i>
-                                                                                                        <span>Mail</span></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <a href="{{route('page-news')}}" class="item-link" style="">Read More <i class="fa fa-arrow-right"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3">
-                                                                                            <div class="team-member">
-                                                                                                <div class="team-image">
-                                                                                                    <img src="images/team/6.jpg">
-                                                                                                </div>
-                                                                                                <div class="team-desc">
-                                                                                                    <h3>Alea Smith</h3>
-                                                                                                    <span>Software Developer</span>
-                                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet. </p>
-                                                                                                    <div class="align-center">
-                                                                                                        <a class="btn btn-xs btn-slide btn-light" href="#">
-                                                                                                            <i class="fab fa-facebook-f"></i>
-                                                                                                            <span>Facebook</span></a>
-                                                                                                            <a class="btn btn-xs btn-slide btn-light" href="#" data-width="100">
-                                                                                                                <i class="fab fa-twitter"></i>
-                                                                                                                <span>Twitter</span></a>
-                                                                                                                <a class="btn btn-xs btn-slide btn-light" href="#" data-width="118">
-                                                                                                                    <i class="fab fa-instagram"></i>
-                                                                                                                    <span>Instagram</span></a>
-                                                                                                                    <a class="btn btn-xs btn-slide btn-light" href="mailto:#" data-width="80">
-                                                                                                                        <i class="icon-mail"></i>
-                                                                                                                        <span>Mail</span></a>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <a href="{{route('page-news')}}" class="item-link" style="">Read More <i class="fa fa-arrow-right"></i></a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="col-lg-16">
-                                                                                                            <a href="{{route('news')}}" class="item-link" style="margin-left: 64%; float:right">Load More <i class="fa fa-arrow-right"></i></a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    
-                                                                                                    <!--END: Team members style 1-->
-                                                                                                </div>
-                                                                                            </section>
-                                                                                        </div>
-                                                                                    </section>
-                                                                                    <!-- end: WELCOME -->
-                                                                                    @endsection
-                                                                                    
+                                </div>
+                                <a href="{{route('page-news')}}" class="item-link" style="">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        @endforeach
+                        <div class="col-lg-16">
+                            <a href="#" class="item-link" style="margin-left: 64%; float:right">Load More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- end: WELCOME -->
+    @endsection
+    
