@@ -1,133 +1,72 @@
 @extends('template.template')
-@section('header')
-<!-- Header -->
-<header id="header" data-transparent="" class="dark">
-    <div class="header-inner">
-        <div class="container">
-            <!--Logo-->
-            <div id="logo"> <a href="{{route('home')}}"><span class="logo-default">Logo</span><span class="logo-dark">Logo</span></a> </div>
-            <!--End: Logo-->
-            <!-- Search -->
-            <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                <form class="search-form" action="search-results-page.html" method="get">
-                    <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                    <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                </form>
-            </div>
-            <!-- end: search -->
-            <!--Header Extras-->
-            <div class="header-extras">
-                <ul>
-                    <li>
-                        <a id="btn-search" href="#"> <i class="icon-search"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!--end: Header Extras-->
-            <!--Navigation Resposnive Trigger-->
-            <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
-            <!--end: Navigation Resposnive Trigger-->
-            <!--Navigation-->
-            <div id="mainMenu">
-                <div class="container">
-                    <nav>
-                        <ul>
-                            <li><a href="{{route('home')}}">Home</a></li>
-                            <li class="dropdown"><a href="{{route('profile')}}">Profile</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Introduction</a>
-                                    </li>
-                                    <li><a href="{{route('lecture')}}">Lecture & Staff</a>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="{{route('structure-organization')}}">Student Corner</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Himahi</a>
-                                            </li>
-                                            <li><a href="#">Activities</a>
-                                            </li>
-                                            <li><a href="#">Student's Achievment Submission</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{route('facillitas')}}">Facilitas</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="{{route('academic')}}">Academic</a></li>
-                            <li class="dropdown"><a href="{{route('academic')}}">Publication And Research</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{route('publication-research')}}">Book</a>
-                                    </li>
-                                    <li><a href="{{route('testimony')}}">Article/Proceeding</a>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="{{route('news')}}">News</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{route('publication-research')}}">Student</a>
-                                        </li>
-                                        <li><a href="{{route('testimony')}}">Lecturer</a>
-                                        </li>
-                                        <li><a href="{{route('testimony')}}">Press Release</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{route('testimony')}}">Testimony</a></li>
-                                <li><a href="{{route('download')}}">Download</a></li>
-                            </ul>
-                        </nav>
+@section('hover')
+            <!-- Inspiro Slider -->
+            <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-height-xs="360">
+                <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-image="homepages/creative/images/slider/1.jpg">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center">
+                            <!-- Captions -->
+                            <font size="5""><h1 class="text-light">lecturer</h1></font>
+                            {{-- <h4 class="m-b-20 text-light">Set your goals high, and don't stop till you get there.</h4> --}}
+                            {{-- <div><a href="#" class="btn btn-danger">Explore more</a></div> --}}
+                            <!-- end: Captions -->
+                        </div>
                     </div>
                 </div>
-                <!--end: Navigation-->
+                <!-- end: Slide 1 bu-->
+                <!-- Slide 2 -->
+                <div class="slide slide-dark kenburns" data-bg-image="homepages/creative/images/slider/2.jpg">
+                    <div class="bg-overlay" data-style="1"></div>
+                    <div class="container">
+                        <div class="slide-captions text-dark text-center">
+                            <!-- Captions -->
+                            <font size="5"><h1 class="text-dark">Lecturer</h1></font>
+                            {{-- <h4 class="m-b-20">Set your goals high, and don't stop till you get there.</h4> --}}
+                            {{-- <div><a href="#" class="btn btn-danger">Explore more</a></div> --}}
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- end: Slide 2 -->
             </div>
-        </div>
-    </header>
-    <!-- end: Header -->
-    @endsection
+            <!--end: Inspiro Slider -->
+@endsection
 @section('content')
-            <!-- SECTION FULLSCREEN -->
-        <section id="section1" class="half-screen" data-bg-parallax="images/parallax/17.jpg">
-
-            <div class="container text-light text-end">
-                <div class="container-fullscreen">
-                    <div class="text-middle">
-                        <div class="heading-text" data-animate="fadeInDown" data-animate-delay="100">
-                            <h2>JOHN SMITH</h2>
-                        </div>
-                        <p class="lead" data-animate="fadeInDown" data-animate-delay="300">Welcome to my personal portfolio
-                        </p>
+        <!-- Content -->
+        <section id="page-content" class="sidebar-both">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar-->
+                    <div class="sidebar sticky-sidebar col-lg-3">
                     </div>
+                    <!-- end: Sidebar-->
+                    <!-- post content -->
+                    <div class="content col-lg-6">
+                        <!-- Blog -->
+                        <div id="blog">
+                            <!-- Post item-->
+                            <div class="post-item">
+                                <div class="post-item-wrap">
+                                    <div class="team-image">
+                                        <a href="#">
+                                            <img alt="" src="images/blog/12.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="post-item-description">
+                                        <h1 style="text-align: center">Nama</h1>
+                                        <h3 style="text-align: center">Deskripsi</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end: Blog -->
+                    </div>
+                    <!-- end: post content -->
                 </div>
             </div>
-
-
         </section>
-        <!-- end: SECTION FULLSCREEN -->
-
-        <!--ABOUT -->
-        <section id="section2">
-            <div class="container">
-                <div class="row  m-b-50">
-                    <div class="col-lg-3">
-                        <div class="heading-text heading-section">
-                            <h2>ABOUT ME</h2>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="row">
-                            <div class="col-lg-6">The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that never
-                                been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat,
-                                <br>
-                                <br> facilisis ut venenatis eu, sodales vel dolor. The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna,
-                                id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. </div>
-
-                            <div class="col-lg-6">Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius
-                                consequat magna, id molestie ipsum volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Pellentesque ipsum erat, facilisis
-                                ut venenatis eu, sodales vel dolor.
-                                <br>
-                                <br>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volut.</div>
-                        </div>
-                    </div>
-
-                </div>
+        <!-- end: Content -->   
 @endsection

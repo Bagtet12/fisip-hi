@@ -1,5 +1,4 @@
 @extends('template.template')
-
     @section('hover')
     <!-- Inspiro Slider -->
     <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-height-xs="480">

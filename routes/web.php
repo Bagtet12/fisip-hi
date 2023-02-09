@@ -24,21 +24,22 @@ Route::get('/', [UserPageController::class, 'home'])->name('home');
 
 
 Route::get('/profile', [UserPageController::class, 'profile'])->name('profile');
-Route::get('/structure-organization', [UserPageController::class, 'structure_organization'])->name('structure-organization');
+Route::get('/profile-student-corner', [UserPageController::class, 'student_corner'])->name('profile-student-corner');
+Route::get('/profile-student-corner-himahi', [UserPageController::class, 'himahi'])->name('profile-student-corner-himahi');
 Route::get('/page-structure-organization', [UserPageController::class, 'page_structure_organization'])->name('page-structure-organization');
 Route::get('/facillitas', [UserPageController::class, 'facillitas'])->name('facillitas');
-Route::get('/lecture', [UserPageController::class, 'lecture'])->name('lecture');
+Route::get('/profile-introduction', [UserPageController::class, 'introduction'])->name('profile-introduction');
 Route::get('/page-lecture', [UserPageController::class, 'page_lecture'])->name('page-lecture');
-Route::get('/staff', [UserPageController::class, 'staff'])->name('staff');
+Route::get('/profile-lecture-staff', [UserPageController::class, 'lecture_staff'])->name('profile-lecture-staff');
 Route::get('/page-staff', [UserPageController::class, 'page_staff'])->name('page-staff');
 
 
 
 
 Route::get('/academic', [UserPageController::class, 'academic'])->name("academic");
-Route::get('/press-release', [UserPageController::class, 'page_release'])->name("press-release");
-Route::get('/publication-research', [UserPageController::class, 'publication_research'])->name('publication-research');
-Route::get('/testimony', [UserPageController::class, 'testimony'])->name('testimony');
+Route::get('/news-press-release', [UserPageController::class, 'press_release'])->name("news-press-release");
+Route::get('/news-student', [UserPageController::class, 'student'])->name('news-student');
+Route::get('/news-lecturer', [UserPageController::class, 'lecturer'])->name('news-lecturer');
 
 
 

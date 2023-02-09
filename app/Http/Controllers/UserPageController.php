@@ -14,9 +14,9 @@ class UserPageController extends Controller
     {
         return view('page/users/profile/profile');
     }
-    public function structure_organization()
+    public function student_corner()
     {
-        return view('page/users/profile/structure-organization');
+        return view('page/users/profile/student-corner');
     }
     public function page_structure_organization()
     {
@@ -26,17 +26,21 @@ class UserPageController extends Controller
     {
         return view('page/users/profile/facillitas');
     }
-    public function lecture()
+    public function introduction()
     {
-        return view('page/users/profile/lecture');
+        return view('page/users/profile/introduction');
+    }
+    public function himahi()
+    {
+        return view('page/users/profile/himahi');
     }
     public function page_lecture()
     {
         return view('page/users/profile/page-lecture');
     }
-    public function staff()
+    public function lecture_staff()
     {
-        return view('page/users/profile/staff');
+        return view('page/users/profile/lecture-staff');
     }
     public function page_staff()
     {
@@ -44,19 +48,19 @@ class UserPageController extends Controller
     }
     public function academic()
     {
-        return view('page/users/academic/academic');
+        return view('page/users/academic');
     }
-    public function page_release()
+    public function press_release()
     {
-        return view('page/users/academic/page-release');
+        return view('page/users/news/press-release');
     }
-    public function publication_research()
+    public function student()
     {
-        return view('page/users/academic/publication-research');
+        return view('page/users/news/student');
     }
-    public function testimony()
+    public function lecturer()
     {
-        return view('page/users/academic/testimony');
+        return view('page/users/news/lecturer');
     }
     public function news()
     {

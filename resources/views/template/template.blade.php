@@ -26,12 +26,10 @@
         <div class="container">
             <!--Logo-->
             <div id="logo">
-                <a href="{{route('home')}}">
-                    
+                <a href="#" class="logo" data-dark-logo="images/hi-logo-removebg.png">
+                    <img src="images/hi-logo-removebg.png" alt="Polo Logo">
                 </a>
-                <img class="" src="images/hi-logo-removebg.png" alt="" width="120px" height="120px" style="margin-bottom: 100%"> 
             </div>
-            
             <!--End: Logo-->
             <!-- Search -->
             <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
@@ -44,8 +42,7 @@
             <!--Header Extras-->
             <div class="header-extras">
                 <ul>
-                    <li>
-                        
+                    <li>      
                         <a id="btn-search" href="#"> <i class="icon-search"></i></a>
                     </li>
                 </ul>
@@ -58,18 +55,17 @@
             <div id="mainMenu">
                 <div class="container">
                     <nav>
-                        <ul>
-                            
+                        <ul>    
                             <li><a href="{{route('home')}}">Home</a></li>
                             <li class="dropdown"><a href="{{route('profile')}}">Profile</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="">Introduction</a>
+                                    <li><a href="{{route('profile-introduction')}}">Introduction</a>
                                     </li>
-                                    <li><a href="{{route('staff')}}">Lecture & Staff</a>
+                                    <li><a href="{{route('profile-lecture-staff')}}">Lecture & Staff</a>
                                     </li>
-                                    <li class="dropdown-submenu"><a href="{{route('structure-organization')}}">Student Corner</a>
+                                    <li class="dropdown-submenu"><a href="{{route('profile-student-corner')}}">Student Corner</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Himahi</a>
+                                            <li><a href="{{route('profile-student-corner-himahi')}}">Himahi</a>
                                             </li>
                                             <li><a href="#">Activities</a>
                                             </li>
@@ -89,13 +85,13 @@
                                     <li><a href="#">Article/Proceeding</a>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">News</a>
+                                <li class="dropdown"><a href="{{route('news')}}">News</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{route('publication-research')}}">Student</a>
+                                        <li><a href="{{route('news-student')}}">Student</a>
                                         </li>
-                                        <li><a href="{{route('testimony')}}">Lecturer</a>
+                                        <li><a href="{{route('news-lecturer')}}">Lecturer</a>
                                         </li>
-                                        <li><a href="{{route('press-release')}}">Press Release</a>
+                                        <li><a href="{{route('news-press-release')}}">Press Release</a>
                                         </li>
                                     </ul>
                                 </li>
