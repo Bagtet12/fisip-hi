@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\TesGambar;
 
+use App\Models\Visit;
 use Illuminate\Http\Request;
 
-class TesGambarController extends Controller
+class VisitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TesGambarController extends Controller
      */
     public function index()
     {
-        return view('page/admin/tes-admin');
+        //
     }
 
     /**
@@ -24,7 +24,7 @@ class TesGambarController extends Controller
      */
     public function create()
     {
-        //
+        return view('page.admin.visit.create');
     }
 
     /**
@@ -36,29 +36,29 @@ class TesGambarController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'gambar' => 'required|file|mimes:jpeg,png,jpg|max:2048000',
-            'judul' => 'required',
+            'name' => 'required',
+            'picture' => 'required|file|mimes:jpeg,png,jpg|max:2048000',
+            'university' => 'required',
+            'description' => 'required',
         ]);
- 
-        // menyimpan data file yang diupload ke variabel $file
-        $file = $request->file('gambar');
+
+        $file = $request->file('picture');
  
         $nama_file = time()."_"."$request->nama"."_".$file->getClientOriginalName();
  
                   // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'gambar/tes';
+        $tujuan_upload = 'gambar/picture';
         $file->move($tujuan_upload,$nama_file);
 
-        TesGambar::create([
-            'gambar' => $nama_file,
-            'judul' => $request->judul,
+        Visit::create([
+            'name' => $request->name,
+            'university' => $request->university,
+            'description' => $request->description,
+            'picture' => $nama_file
         ]);
- 
-        // alert('Data Berhasil di Tambah');
-        return redirect('/tes-admin')->with('data berhasil ditambah');
-    }
 
-    
+        return redirect('/dashboard');
+    }
 
     /**
      * Display the specified resource.

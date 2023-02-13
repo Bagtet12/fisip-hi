@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\TesGambar;
 
 use Illuminate\Http\Request;
 
-class TesGambarController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class TesGambarController extends Controller
      */
     public function index()
     {
-        return view('page/admin/tes-admin');
+        return view('page.admin.news.index');
     }
 
     /**
@@ -35,30 +34,8 @@ class TesGambarController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'gambar' => 'required|file|mimes:jpeg,png,jpg|max:2048000',
-            'judul' => 'required',
-        ]);
- 
-        // menyimpan data file yang diupload ke variabel $file
-        $file = $request->file('gambar');
- 
-        $nama_file = time()."_"."$request->nama"."_".$file->getClientOriginalName();
- 
-                  // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'gambar/tes';
-        $file->move($tujuan_upload,$nama_file);
-
-        TesGambar::create([
-            'gambar' => $nama_file,
-            'judul' => $request->judul,
-        ]);
- 
-        // alert('Data Berhasil di Tambah');
-        return redirect('/tes-admin')->with('data berhasil ditambah');
+        //
     }
-
-    
 
     /**
      * Display the specified resource.

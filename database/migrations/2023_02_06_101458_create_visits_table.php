@@ -18,6 +18,7 @@ class CreateVisitsTable extends Migration
             $table->string('name');
             $table->string('picture');
             $table->string('description');
+            $table->string('university');
             $table->string('activitypict')->nullable();
             $table->timestamps();
         });
