@@ -48,7 +48,8 @@ Route::get('/news-press-release', [UserPageController::class, 'press_release'])-
 Route::get('/news-student', [UserPageController::class, 'student'])->name('news-student');
 Route::get('/news-lecturer', [UserPageController::class, 'lecturer'])->name('news-lecturer');
 
-
+Route::get('/publication-research-book', [UserPageController::class, 'book'])->name('publication-research-book');
+Route::get('/publication-research-article', [UserPageController::class, 'article'])->name('publication-research-article');
 
 
 Route::get('/news', [UserPageController::class, 'news'])->name('news');
@@ -56,6 +57,7 @@ Route::get('/page-news', [UserPageController::class, 'page_news'])->name('page-n
 
 
 
+Route::get('/testimony', [UserPageController::class, 'testimony'])->name('testimony');
 Route::get('/download', [UserPageController::class, 'download'])->name('download');
 
 

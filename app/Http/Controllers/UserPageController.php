@@ -64,6 +64,14 @@ class UserPageController extends Controller
     {
         return view('page/users/news/lecturer');
     }
+    public function book()
+    {
+        return view('page/users/publication-research/book');
+    }
+    public function article()
+    {
+        return view('page/users/publication-research/article');
+    }
     public function news()
     {
         return view('page/users/news/news');
@@ -71,6 +79,10 @@ class UserPageController extends Controller
     public function page_news()
     {
         return view('page/users/news/page-news');
+    }
+    public function testimony()
+    {
+        return view('page/users/testimony');
     }
     public function download()
     {

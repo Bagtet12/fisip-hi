@@ -80,9 +80,9 @@
                             <li><a href="{{route('academic')}}">Academic</a></li>
                             <li class="dropdown"><a href="#">Publication And Research</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Book</a>
+                                    <li><a href="{{route('publication-research-book')}}">Book</a>
                                     </li>
-                                    <li><a href="#">Article/Proceeding</a>
+                                    <li><a href="{{route('publication-research-article')}}">Article/Proceeding</a>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="{{route('news')}}">News</a>
@@ -95,7 +95,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Testimony</a></li>
+                                <li><a href="{{route('testimony')}}">Testimony</a></li>
                                 <li><a href="{{route('download')}}">Download</a></li>
                             </ul>
                         </nav>

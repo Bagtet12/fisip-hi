@@ -102,36 +102,3 @@
     </div>
 </section>
 @endsection
-
-{{-- @section('content')
-            <!-- PRACTICE AREAS -->
-            <section id="section2" class="p-t-100">
-                <div class="container">
-                    {{-- <div class="heading-text heading-section text-center">
-                        <h2>Reference</h2>
-                        <span class="lead">Create amam ipsum dolor sit amet, Beautiful nature, and rare feathers!.</span>
-                    </div> --}}
-                    {{-- <div class="row">
-                        <div class="col-lg-6">
-                            <div class="icon-box effect medium square color">
-                                <h3>Academic Handbook</h3>
-                                <div class="icon"> <a href="#"><i class="fa fa-book"></i></a></div>
-                                <p><a href=""> Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor
-                                    cursumus.</p></a>
-                                    <div class="icon"> <a href="#"><i class="fa fa-boock"></i></a></div>
-                                <p><a href=""> Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor
-                                    cursumus.</p></a>
-                                    <div class="icon"> <a href="#"><i class="fa fa-book"></i></a></div>
-                                <p><a href=""> Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor
-                                    cursumus.</p></a>
-                                    <div class="icon"> <a href="#"><i class="fa fa-book"></i></a></div>
-                                <p><a href=""> Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor
-                                    cursumus.</p></a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
-            <!-- end: PRACTICE AREAS -->
-{{-- @endsection  --}}
